@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowRight as Arrow } from 'react-icons/md';
 const Hero = () => {
   return (
     <div className="bg-blue-900 text-white  ">
-      <Container designs="py-10 md:py-20 grid md:grid-cols-2 gap-5">
+      <Container designs="py-10 pb-16 md:pb-[120px] md:pt-[100px] grid md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="uppercase text-4xl">Real Time Covid-19 Updates</h1>
           <p className="text-gray-300">
