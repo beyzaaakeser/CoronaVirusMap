@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from '../../components/Container';
 import { MdOutlineKeyboardArrowRight as Arrow } from 'react-icons/md';
+import Container from '../../components/container/Container';
 const Hero = () => {
   return (
     <div className="bg-blue-900 text-white  ">
