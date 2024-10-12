@@ -5,5 +5,7 @@ test("renders the loading state initially",() =>{
     render(<Statistics/>)
 
     const loader = screen.getByTestId("loader")
+    // alttaki kodu sil geliştir
+    const loader2 = screen.getByTestId("loader")
 
 })
