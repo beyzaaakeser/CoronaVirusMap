@@ -1,0 +1,29 @@
+import { render, screen } from '@testing-library/react';
+import Heading from '../pages/detail/Heading';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import { thunk } from 'redux-thunk';
+import { BrowserRouter } from 'react-router-dom';
+
+const mockStore = configureStore([thunk]);
+
+it('should display a loader on the screen when the store is loading', () => {
+  const store = mockStore({ isLoading: true, error: null, data: null });
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Heading />
+      </BrowserRouter>
+    </Provider>
+  );
+
+  screen.getByTestId('header-loader');
+});
+
+it('should remove the loader from the screen when the store finishes loading', () => {
+  // Test implementation
+});
+
+it('should display the data on the screen when it is loaded into the store', () => {
+  // Test implementation
+});

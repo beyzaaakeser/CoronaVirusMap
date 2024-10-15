@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderLoader = () => {
   return (
-    <div className='flex items-center gap-2 '>
+    <div data-testid="header-loader" className='flex items-center gap-2 '>
       <div className='bg-gray-300 h-10 w-[110px] rounded-md animate-pulse'></div>
       <div className="bg-gray-300 w-16 h-10 rounded-md animate-pulse"></div>
     </div>
