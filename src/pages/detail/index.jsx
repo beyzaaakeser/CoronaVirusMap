@@ -11,7 +11,9 @@ const Detail = () => {
   }, [])
   
   return (
-    <div>Detail</div>
+    <div>
+      <img src="https://flagsapi.com/BE/flat/64.png"></img>
+    </div>
   )
 }
 
