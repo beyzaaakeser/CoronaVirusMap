@@ -21,9 +21,20 @@ it('should display a loader on the screen when the store is loading', () => {
 });
 
 it('should remove the loader from the screen when the store finishes loading', () => {
-  // Test implementation
+  const store = mockStore({ isLoading: false, error: null, data: null });
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Heading />
+      </BrowserRouter>
+    </Provider>
+  );
+
+  const element = screen.queryByTestId('header-loader');
+
+  expect(element).toBeNull();
 });
 
 it('should display the data on the screen when it is loaded into the store', () => {
-  // Test implementation
+
 });
