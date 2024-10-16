@@ -7,6 +7,10 @@ export const getDetails = createAsyncThunk('covid/getDetails', async (code) => {
       code,
     },
   });
+  const result = res.data[0];
 
-  return res.data[0];
+  result.lastChange = new Date(result.lastChange).toLocaleDateString();
+  result.lastUpdate = new Date(result.lastUpdate).toLocaleDateString();
+
+  return result;
 });
