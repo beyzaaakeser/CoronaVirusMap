@@ -24,7 +24,8 @@ const Heading = () => {
               </h1>
               <img
                 className="drop-shadow-[0_0_8px_rgba(0,0,0,0.5)] w-[64px] h-[64px]"
-                src={`https://flagsapi.com/${data?.code}/flat/64.png`}
+                src={`https://flagsapi.com/${data.code}/flat/64.png`}
+                alt='flag'
               ></img>
             </div>
           

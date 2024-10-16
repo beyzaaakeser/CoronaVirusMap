@@ -36,5 +36,23 @@ it('should remove the loader from the screen when the store finishes loading', (
 });
 
 it('should display the data on the screen when it is loaded into the store', () => {
+  const store = mockStore({
+    isLoading: false,
+    error: null,
+    data: { country: 'Turkey', code: 'TR' },
+  });
 
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Heading />
+      </BrowserRouter>
+    </Provider>
+  );
+
+  screen.getByRole('heading', { name: 'Turkey' });
+
+  const flagImg = screen.getByAltText('flag');
+
+  expect(flagImg).toHaveAttribute('src', `https://flagsapi.com/TR/flat/64.png`);
 });
