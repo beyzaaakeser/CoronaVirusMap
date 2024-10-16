@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { thunk } from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
+import { data } from '../constants';
 
 const mockStore = configureStore([thunk]);
 
@@ -39,7 +40,7 @@ it('should display the data on the screen when it is loaded into the store', () 
   const store = mockStore({
     isLoading: false,
     error: null,
-    data: { country: 'Turkey', code: 'TR' },
+    data,
   });
 
   render(
@@ -50,7 +51,7 @@ it('should display the data on the screen when it is loaded into the store', () 
     </Provider>
   );
 
-  screen.getByRole('heading', { name: 'Turkey' });
+  screen.getByRole('heading', { name: data.country });
 
   const flagImg = screen.getByAltText('flag');
 
