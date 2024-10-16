@@ -30,17 +30,17 @@ const Statistics = () => {
             <Item
               color="text-pink-600"
               text="Total Cases"
-              value={millify(totals.confirmed)}
+              value={millify(totals?.confirmed)}
             />
             <Item
               color="text-green-500"
               text="Total Recovered Cases"
-              value={millify(totals.recovered)}
+              value={millify(totals?.recovered)}
             />
             <Item
               color="text-gray-500"
               text="Total Deaths"
-              value={millify(totals.deaths)}
+              value={millify(totals?.deaths)}
             />
           </>
         )}
