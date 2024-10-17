@@ -8,12 +8,13 @@ import HomeLoader from '../../components/loader/HomeLoader';
 const Statistics = () => {
   const [totals, setTotals] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     api
       .get('/totals')
       .then((res) => setTotals(res.data[0]))
-      .catch((err) => console.log(err))
+      .catch((err) => setIsError(err))
       .finally(() => setIsLoading(false));
   }, []);
 
@@ -24,7 +25,9 @@ const Statistics = () => {
       gap-5 mt-[-34px] md:mt-[-48px]"
       >
         {isLoading ? (
-          <HomeLoader/>
+          <HomeLoader />
+        ) : isError ? (
+          <p className='text-center col-span-3'>Statistics cannot be obtained.</p>
         ) : (
           <>
             <Item
