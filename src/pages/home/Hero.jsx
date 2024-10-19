@@ -18,7 +18,12 @@ const Hero = () => {
           <div className="flex gap-5">
             <button className="bg-pink-700 py-1 px-4 rounded-sm flex items-center flex-1 hover:bg-pink-600 transition ">
               <span className="flex-1 whitespace-nowrap">
-                How to Protect Yourself?
+                <a
+                  href="https://jamcovid19.moh.gov.jm/how-to-protect.html"
+                  target="_blank"
+                >
+                  How to Protect Yourself?
+                </a>
               </span>
               <Arrow className="text-2xl" />
             </button>
